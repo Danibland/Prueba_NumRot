@@ -10,12 +10,31 @@ namespace Prueba_NumRot
     {
         public static void Conv_min()
         {
-            Console.Write("Ingrese una pablabra en minúsculas: ");
-            string palabra = Console.ReadLine();
+            try
+            {
+                Console.Write("Ingrese una pablabra en minúsculas: ");
+                string palabra = Console.ReadLine();
 
-             string palabra_M = palabra.ToUpper();
+                if (palabra.ToLower() == palabra)
+                {
+                    string palabra_M = palabra.ToUpper();
 
-            Console.Write("La palabra se convierte a mayusculas :  "+palabra_M);
+                    Console.Write("La palabra se convierte a mayusculas :  " + palabra_M);
+                }
+                else
+                {
+                    Console.WriteLine("Ingrese palabras solo en minusculas");
+                    Conv_min();
+                }
+
+               
+            }
+            catch (Exception)
+            {
+                throw;
+                
+            }
+
         }
     }
 }

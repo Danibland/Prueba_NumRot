@@ -78,7 +78,7 @@ namespace Prueba_NumRot
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 Console.WriteLine("No es el formato permitido");
                 

@@ -43,7 +43,8 @@ namespace Prueba_NumRot
             catch (Exception )
             {
 
-                Console.WriteLine("No es el formato permitido");
+                Console.WriteLine("No es el formato permitido,vuelve a intentarlo");
+                Promedio();
             }
             
         }

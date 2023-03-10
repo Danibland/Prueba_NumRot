@@ -10,15 +10,26 @@ namespace Prueba_NumRot
     {
         public static void calc_hip()
         {
-            Console.WriteLine("Ingrese la medida del lado A:");
-            double a = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Ingrese la medida del lado B:");
-            double b = double.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Ingrese la medida del lado A:");
+                double a = double.Parse(Console.ReadLine());
 
-            double c = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
+                Console.WriteLine("Ingrese la medida del lado B:");
+                double b = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("La medida de la hipotenusa es: " + c);
+                double c = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
+
+                Console.WriteLine("La medida de la hipotenusa es: " + c);
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Vuelve a intentarlo \n");
+                calc_hip();
+            }
+
         }
     }
 }
